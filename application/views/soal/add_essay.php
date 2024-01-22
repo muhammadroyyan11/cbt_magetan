@@ -30,38 +30,16 @@
                                     </div>
                                 </div>
 
-                                <?php
-                                $abjad = ['a', 'b', 'c', 'd'];
-                                foreach ($abjad as $abj) :
-                                    $abjd = $abj;
-                                    $opsi = 'p_' . $abj;
-                                ?>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3">
-                                            <label for="textarea-input" class=" form-control-label">Pilihan <?= strtoupper($abjd) ?></label>
-                                        </div>
-                                        <div class="col-12 col-md-9">
-                                            <!-- <div class="form-group">
-                                                <input type="file" name="file_<?= $abjd ?>" class="form-control">
-                                            </div> -->
-                                            <div class="form-group">
-                                                <textarea class="form-control summernote" name="p_<?= $abjd ?>"><?= $this->input->post("p_'<?= $abjd ?>'") ?? $row->$opsi ?></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                <?php endforeach; ?>
                                 <div class="row form-group">
                                     <div class="col col-md-3">
-                                        <label for="textarea-input" class=" form-control-label">Kunci Jawaban</label>
+                                        <label for="textarea-input" class=" form-control-label">Jawaban Essay</label>
                                     </div>
                                     <div class="col-12 col-md-9">
-                                        <select name="kunci" id="" class="form-control">
-                                            <option value="a" <?= $row->kunci == 'a' ? 'selected' : '' ?>>Pilihan A</option>
-                                            <option value="b" <?= $row->kunci == 'b' ? 'selected' : '' ?>>Pilihan B</option>
-                                            <option value="c" <?= $row->kunci == 'c' ? 'selected' : '' ?>>Pilihan C</option>
-                                            <option value="d" <?= $row->kunci == 'd' ? 'selected' : '' ?>>Pilihan D</option>
-                                        </select>
+                                        <!-- <div class="form-group">
+                                            </div> -->
+                                        <div class="form-group">
+                                            <textarea class="form-control summernote" name="p_essay"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row form-group">

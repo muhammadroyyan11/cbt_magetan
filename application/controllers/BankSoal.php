@@ -18,10 +18,19 @@ class BankSoal extends CI_Controller
     public function index()
     {
         $data = [
-            'soal' => $this->base->getBankSoal()->result_array(),
+            'soal' => $this->base->getBankSoal(['is_essay' => 0])->result_array(),
             'title' => 'Bank Soal'
         ];
         $this->template->load('template', 'soal/data', $data);
+    }
+
+    public function essay()
+    {
+        $data = [
+            'soal' => $this->base->getBankSoal(['is_essay' => 1])->result_array(),
+            'title' => 'Bank Soal'
+        ];
+        $this->template->load('template', 'soal/data_essay', $data);
     }
 
     public function add()
@@ -39,6 +48,7 @@ class BankSoal extends CI_Controller
         $soal->file_c = null;
         $soal->file_d = null;
         $soal->tipe_file = null;
+        $soal->essay_answer = null;
         $soal->kunci = null;
         $soal->level = null;
         $soal->hrd_id = null;
@@ -61,6 +71,44 @@ class BankSoal extends CI_Controller
         $this->template->load('template', 'soal/add', $data);
     }
 
+    public function add_essay()
+    {
+        $soal = new stdClass();
+        $soal->id_soal = null;
+        $soal->pertanyaan = null;
+        $soal->file = null;
+        $soal->p_a = null;
+        $soal->p_b = null;
+        $soal->p_c = null;
+        $soal->p_d = null;
+        $soal->file_a = null;
+        $soal->file_b = null;
+        $soal->file_c = null;
+        $soal->file_d = null;
+        $soal->tipe_file = null;
+        $soal->essay_answer = null;
+        $soal->kunci = null;
+        $soal->level = null;
+        $soal->hrd_id = null;
+        $soal->dept_id = null;
+
+        // $where = array('login_id' => $this->session->userdata('login_session')['user']);
+        // $ujian = $this->ujian->get($where)->result();
+
+        // $tes = $this->ujian->getUjianId(25);
+        // var_dump($tes);
+
+        $data = [
+            'title' => 'Bank Soal',
+            'row' => $soal,
+            'page' => 'add',
+            'kategori'  => $this->base->getSub()->result_array()
+            // 'ujian' => $ujian
+        ];
+
+        $this->template->load('template', 'soal/add_essay', $data);
+    }
+   
     public function edit($id)
     {
 

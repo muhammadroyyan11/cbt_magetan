@@ -31,7 +31,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Department</th>
+                                    <th>Tingkat Sekolah</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -68,7 +68,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Tambah Department lowongan</h4>
+                <h4 class="modal-title">Tambah Tingkat Sekolah</h4>
             </div>
             <?= form_open('kategori/proses'); ?>
             <div class="modal-body">

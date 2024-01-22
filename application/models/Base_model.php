@@ -424,10 +424,13 @@ class Base_model extends CI_Model
         return $query;
     }
 
-    public function getBankSoal() {
+    public function getBankSoal($where = null) {
         $this->db->select('*');
         $this->db->from('soal');
         $this->db->join('sub_kategori', 'sub_kategori.id_sub=soal.dept_id');
+        if ($where != null) {
+            $this->db->where($where);
+        }
         return $this->db->get();
     }
 

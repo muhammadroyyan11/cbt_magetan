@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="<?= base_url() ?>assets/img/logo.png" type="image/x-icon" />
-    <title>TJAKRINDO MAS - <?= $title ?></title>
+    <title>CBT TEST - <?= $title ?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -166,6 +166,9 @@
                             </li>
                             <li>
                                 <a href="<?= site_url('bankSoal') ?>"><i class="fa fa-circle-o"></i> Bank Soal</a>
+                            </li>
+                            <li>
+                                <a href="<?= site_url('bankSoal/essay') ?>"><i class="fa fa-circle-o"></i> Bank Soal (Essay)</a>
                             </li>
                         </ul>
                     </li>

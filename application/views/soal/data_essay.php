@@ -18,7 +18,7 @@
                 <div class="box">
                     <div class="box-header">
                         <div class="pull-right">
-                            <a href="<?= site_url('bankSoal/add')?>" class="btn btn-primary btn-flat">
+                            <a href="<?= site_url('bankSoal/add_essay')?>" class="btn btn-primary btn-flat">
                                 <i class="fa fa-plus"></i> Add
                             </a>
                         </div>
@@ -32,11 +32,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Pertanyaan</th>
-                                    <th>Pilihan A</th>
-                                    <th>Pilihan B</th>
-                                    <th>Pilihan C</th>
-                                    <th>Pilihan D</th>
-                                    <th>kunci jawaban</th>
+                                    <th>Jawaban</th>
                                     <th>Tingkat</th>
                                     <th>Aksi</th>
                                 </tr>
